@@ -1,0 +1,69 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 78px;
+    border: 1px solid rgb(229, 229, 229);
+    box-shadow: 5px 5px 19px 0 grey;
+}
+
+.header__content {
+    display: flex;
+    height: 100%;
+    align-content: flex-end;
+    align-items: center;
+    margin-left: 110px;
+}
+
+.header__content_icon {
+    width: 35px;
+    margin: 12px 0;
+}
+
+.header__content p {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 0 0 0 10px;
+    color: rgb(57, 148, 5);
+}
+
+.header__content input {
+    margin: 0 0 0 50px;
+    padding: 0 0 0 3px;
+    height: 20px;
+    background-color: rgb(216, 220, 221);
+    border-color: #fff;
+}
+
+.header__content_date {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    display: flex;
+    margin-right: 85px;
+}
+
+.header__date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header__time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 20px 0 20px;
+}
+
+.header__time_clock {
+    width: 20px;
+    height: 20px;
+}
+
+.header__time_num {
+    padding-top: 5px;
+}
+

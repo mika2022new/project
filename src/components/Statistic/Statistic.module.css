@@ -1,0 +1,18 @@
+.list__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    margin: 0 113px;
+    height: 70px;
+    padding-top: 30px;
+}
+
+.header__content_icon2 {
+    width: 30px;
+    height: 30px;
+}
+
+.list__title p {
+    margin: 2px 0 0 20px;
+}

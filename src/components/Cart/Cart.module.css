@@ -1,0 +1,66 @@
+.list__card {
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 14px;
+    border: 1px solid rgb(229, 229, 229);
+    box-shadow: 5px 5px 19px 0 grey;
+}
+
+.list__card_title {
+    width: 33%;
+    font-size: 13px;
+    padding: 8px 30px;
+}
+
+.list__card_icon{
+    display: flex;
+    align-items: center;
+    margin: 0 10px 0 40px;
+}
+
+.list__card_icon img{
+    width: 25px;
+    height: 25px;
+}
+
+.list__card_amount {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list__amount_num {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.list__card_date,
+.list__card_price {
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 250px;
+}
+
+.list__date_num,
+.list__price_num {
+    font-size: 8px;
+}
+
+.devise {
+    font-size: 8px;
+}
+
+.list__card_delete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    margin-left: 150px;
+    cursor: pointer;
+
+}
