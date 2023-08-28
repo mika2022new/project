@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styles from './Header.module.css';
 
@@ -8,6 +8,19 @@ import ClockImage from "../../assets/clock.jpg";
 
 
 const Header = (props) => {
+    const lang = navigator.language;
+    let current = new Date();
+
+    let dayName = current.toLocaleString(lang,{weekday: 'long' });
+    let date = `
+    ${current.getDate()} ${current.toLocaleString(lang,{ month: 'long' })}, ${current.getFullYear()}
+    `;    
+
+    const [dateState, setDateState] = useState(new Date());
+    useEffect(() => {
+           setInterval(() => setDateState(new Date()), 30000);
+    }, []);
+    
     return (
         <React.Fragment>
                     <header className={styles.header}>
@@ -29,14 +42,20 @@ const Header = (props) => {
                         <div className={styles.header__content_date}>
 
                             <div className={styles.header__date}>
-                                <span>Vtornik</span>
-                                <span>06 Apr, 2017</span>
+                                <span>{dayName}</span>
+                                <span>{date}</span>
                             </div>
                             
                             <div className={styles.header__time}>
                                 <img className={styles.header__time_clock}
                                 src={ClockImage} alt="clock"/>
-                                <span className={styles.header__time_num}>17:20</span>
+                                <span className={styles.header__time_num}>
+                                {dateState.toLocaleString('en-US', {
+                                    hour: 'numeric',
+                                    minute: 'numeric',
+                                    hour12: false,
+                                })}
+                                    </span>
                             </div>
 
                         </div>

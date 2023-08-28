@@ -1,0 +1,18 @@
+.list__card {
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 14px;
+    border: 1px solid rgb(229, 229, 229);
+    box-shadow: 5px 5px 19px 0 grey;
+    margin: 20px 130px;
+
+}
+
+.list__card {
+    display: flex;
+    height: 70px;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 14px;
+    border: 1px solid rgb(229, 229, 229);
+    box-shadow: 5px 5px 19px 0 grey;
+}
