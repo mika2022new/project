@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Header from "./components/Header/Header";
+import Cart from "./components/Modal/Cart";
 import PrixodList from "./components/PrixodList/PrixodList";
 
 
@@ -38,9 +39,11 @@ function App() {
   if (tasks.length > 0) {
     content = <PrixodList items={tasks} onDeleteTask={deleteTaskHandler} />;
   }
-  
+
+
   return (
     <div>
+      <Cart />
       <Header />
 
       <section id="tasks">{content}</section>
