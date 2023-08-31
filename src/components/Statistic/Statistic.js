@@ -1,9 +1,6 @@
 import React from 'react';
-
 import styles from './Statistic.module.css';
-
 import IconImage2 from "../../assets/icon2.jpg";
-
 
 const Statistic = (props) => {
     return (
@@ -13,7 +10,6 @@ const Statistic = (props) => {
             src={IconImage2} alt="icon2"/>
             <p>Prixodi / 25</p>
             </div>
-            
         </React.Fragment>
     );
 };

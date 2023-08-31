@@ -1,7 +1,6 @@
 import styles from './Cart.module.css';
 import Modal from './Modal';
 
-
 const Cart = (props) => {
 
     const cartItems = (
@@ -13,6 +12,7 @@ const Cart = (props) => {
     );
 
     return (
+        
         <Modal onHideCart={props.onHideCart}>
             {cartItems} 
 
@@ -22,14 +22,10 @@ const Cart = (props) => {
             </div>
 
             <div className={styles.actions}>
-
                 <button className={styles['button--alt']} onClick={props.onHideCart}>Close</button>
-                <button className={styles.button}>Order</button>
-
+                <button className={styles.button}>Delete</button>
             </div>
-
         </Modal>
-
     ); 
 };
 

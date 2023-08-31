@@ -10,7 +10,6 @@ import ListImage from "../../assets/list.jpg";
 import DeleteImage from "../../assets/delete.jpg";
 
 
-
 const PrixodList = (props) => {
     return (
 
@@ -20,7 +19,6 @@ const PrixodList = (props) => {
             <div>
 
                 <Statistic />
-
 
             {props.items.map((task) => (
                 <Prixod key={task.id} id={task.id} onDelete={props.onDeleteTask}>
@@ -50,7 +48,7 @@ const PrixodList = (props) => {
                     <span className={styles.devise}>{task.dev}</span></span>
                 </div>
 
-                <div className={styles.list__card_delete}>
+                <div className={styles.list__card_delete} onClick={props.onShowCart}>
                     <img src={DeleteImage} alt="delete"/>
                 </div>
 

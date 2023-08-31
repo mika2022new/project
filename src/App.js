@@ -7,6 +7,16 @@ import PrixodList from "./components/PrixodList/PrixodList";
 
 function App() {
 
+  const [cartIsVisible, setCartIsVisible] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsVisible(true);
+  }
+
+  const hideCartHandler = () => {
+    setCartIsVisible(false);
+  }
+  
   const [tasks, setTasks] = useState([
     { id: "t1", title: "Long Long Text of Prixod", quant: 23, quantext: "Producs", 
     date1: "04 / 12", date2: "06 / Apr / 2017", amount1: "2 500 $", 
@@ -31,23 +41,25 @@ function App() {
       return updatedTasks;
     });
   };
-
+  
   let content = (
     <p style={{ textAlign: "center" }}>Please reload the page</p>
   );
 
   if (tasks.length > 0) {
-    content = <PrixodList items={tasks} onDeleteTask={deleteTaskHandler} />;
+    content = <PrixodList items={tasks} onDeleteTask={deleteTaskHandler} onShowCart={showCartHandler}/>;
   }
 
-
   return (
-    <div>
-      <Cart />
+    <React.Fragment>
+
+      {cartIsVisible && <Cart onHideCart={hideCartHandler}/>}
+
       <Header />
 
       <section id="tasks">{content}</section>
-    </div>
+
+    </React.Fragment>
   );
 }
 

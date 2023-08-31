@@ -6,7 +6,6 @@ import IconImage from "../../assets/icon.jpg";
 import ClockImage from "../../assets/clock.jpg";
 
 
-
 const Header = (props) => {
     const lang = navigator.language;
     let current = new Date();
@@ -57,10 +56,8 @@ const Header = (props) => {
                                 })}
                                     </span>
                             </div>
-
                         </div>
                     </header>
-
 
         </React.Fragment>
     );
